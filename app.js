@@ -19,8 +19,8 @@ const getInfo= async(direccion) => {
         
         //Crear constante para cargar los datos extraidos y sacar el y el clima
         const temp = await clima.getClima(coords.lat,coords.lon);
-            
-        return(`La temperatura de ${coords.direccion} es de ${temp} grados`)
+       
+        return(`La temperatura de ${coords.direccion} es de ${temp.temp} grados, la velocidad del viento es de ${temp.viento} km/h y hay una humedad del ${temp.humedad}%`)
     } catch (error) {
         return (`No se pudo determinar la temperatura de ${direccion}`)
     
